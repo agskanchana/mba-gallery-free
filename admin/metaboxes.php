@@ -24,9 +24,15 @@ function medbeafgallery_add_metaboxes() {
         'high'
     );
 
-    // Case Details - REMOVED
-
-    // Only register main image metabox for simplified free version
+    // Case Details (PRO - Locked in Free Version)
+    add_meta_box(
+        'medbeafgallery_case_details',
+        esc_html__('Case Details', 'medical-before-after-gallery'),
+        'medbeafgallery_case_details_metabox',
+        'medbeafgallery_case',
+        'normal',
+        'default'
+    );
 
     // Shortcode Display
     add_meta_box(
@@ -99,6 +105,167 @@ function medbeafgallery_image_pairs_metabox($post) {
                     </div>
                 </div>
             </div>
+        </div>
+
+        <!-- Additional Image Pairs (PRO Feature - Locked) -->
+        <div class="medbeafgallery-pro-metabox-section">
+            <div class="medbeafgallery-pro-section-header">
+                <h3><?php esc_html_e('Additional Image Pairs (Optional)', 'medical-before-after-gallery'); ?></h3>
+                <span class="medbeafgallery-pro-badge">
+                    <span class="dashicons dashicons-lock"></span> PRO
+                </span>
+            </div>
+
+            <div class="medbeafgallery-pro-overlay">
+                <div class="medbeafgallery-pro-overlay-content">
+                    <span class="dashicons dashicons-lock"></span>
+                    <p><?php esc_html_e('This feature is available in PRO version', 'medical-before-after-gallery'); ?></p>
+                    <a href="https://medicalbeforeaftergallery.com/#pricing" target="_blank" class="button button-primary">
+                        <?php esc_html_e('Upgrade to PRO', 'medical-before-after-gallery'); ?>
+                    </a>
+                </div>
+            </div>
+
+            <div class="medbeafgallery-pro-content">
+                <p class="description"><?php esc_html_e('Add multiple before/after image pairs for different views or angles.', 'medical-before-after-gallery'); ?></p>
+                
+                <!-- Sample Additional Pair -->
+                <div class="medbeafgallery-image-pair medbeafgallery-additional-pair">
+                    <div class="medbeafgallery-pair-header">
+                        <span><?php esc_html_e('Image Pair #1', 'medical-before-after-gallery'); ?></span>
+                        <button type="button" class="button" disabled><?php esc_html_e('Remove', 'medical-before-after-gallery'); ?></button>
+                    </div>
+                    <div class="medbeafgallery-image-pair-row">
+                        <div class="medbeafgallery-image-pair-column">
+                            <div class="medbeafgallery-image-container">
+                                <label><?php esc_html_e('Before Image', 'medical-before-after-gallery'); ?></label>
+                                <div class="medbeafgallery-image-preview"></div>
+                                <button type="button" class="button" disabled><?php esc_html_e('Upload Before Image', 'medical-before-after-gallery'); ?></button>
+                            </div>
+                        </div>
+                        <div class="medbeafgallery-image-pair-column">
+                            <div class="medbeafgallery-image-container">
+                                <label><?php esc_html_e('After Image', 'medical-before-after-gallery'); ?></label>
+                                <div class="medbeafgallery-image-preview"></div>
+                                <button type="button" class="button" disabled><?php esc_html_e('Upload After Image', 'medical-before-after-gallery'); ?></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="medbeafgallery-image-description">
+                        <label><?php esc_html_e('View Description:', 'medical-before-after-gallery'); ?></label>
+                        <input type="text" class="regular-text" placeholder="<?php esc_attr_e('e.g.. Front View', 'medical-before-after-gallery'); ?>" disabled>
+                    </div>
+                </div>
+
+                <div class="medbeafgallery-add-pair-container">
+                    <button type="button" class="button" disabled>
+                        <span class="dashicons dashicons-plus-alt"></span>
+                        <?php esc_html_e('Add Additional Image Pair', 'medical-before-after-gallery'); ?>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <?php
+}
+
+/**
+ * Display the Case Details metabox (PRO - Locked)
+ */
+function medbeafgallery_case_details_metabox($post) {
+    ?>
+    <div class="medbeafgallery-admin-metabox medbeafgallery-pro-metabox">
+        <div class="medbeafgallery-pro-metabox-header">
+            <p class="description"><?php esc_html_e('These details will be used for filtering and displaying information about the case.', 'medical-before-after-gallery'); ?></p>
+            <span class="medbeafgallery-pro-badge">
+                <span class="dashicons dashicons-lock"></span> PRO
+            </span>
+        </div>
+
+        <div class="medbeafgallery-pro-overlay">
+            <div class="medbeafgallery-pro-overlay-content">
+                <span class="dashicons dashicons-lock"></span>
+                <p><?php esc_html_e('This feature is available in PRO version', 'medical-before-after-gallery'); ?></p>
+                <a href="https://medicalbeforeaftergallery.com/#pricing" target="_blank" class="button button-primary">
+                    <?php esc_html_e('Upgrade to PRO', 'medical-before-after-gallery'); ?>
+                </a>
+            </div>
+        </div>
+
+        <div class="medbeafgallery-pro-content">
+            <table class="form-table medbeafgallery-case-details">
+                <tr>
+                    <th scope="row"><label><?php esc_html_e('Gender', 'medical-before-after-gallery'); ?></label></th>
+                    <td>
+                        <select disabled>
+                            <option><?php esc_html_e('Select Gender', 'medical-before-after-gallery'); ?></option>
+                            <option><?php esc_html_e('Male', 'medical-before-after-gallery'); ?></option>
+                            <option><?php esc_html_e('Female', 'medical-before-after-gallery'); ?></option>
+                            <option><?php esc_html_e('Other', 'medical-before-after-gallery'); ?></option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row"><label><?php esc_html_e('Age Range', 'medical-before-after-gallery'); ?></label></th>
+                    <td>
+                        <select disabled>
+                            <option><?php esc_html_e('Select Age Range', 'medical-before-after-gallery'); ?></option>
+                            <option><?php esc_html_e('18-25', 'medical-before-after-gallery'); ?></option>
+                            <option><?php esc_html_e('26-35', 'medical-before-after-gallery'); ?></option>
+                            <option><?php esc_html_e('36-45', 'medical-before-after-gallery'); ?></option>
+                            <option><?php esc_html_e('46-55', 'medical-before-after-gallery'); ?></option>
+                            <option><?php esc_html_e('56+', 'medical-before-after-gallery'); ?></option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row"><label><?php esc_html_e('Recovery Time', 'medical-before-after-gallery'); ?></label></th>
+                    <td>
+                        <select disabled>
+                            <option><?php esc_html_e('Select Recovery Time', 'medical-before-after-gallery'); ?></option>
+                            <option><?php esc_html_e('1-3 days', 'medical-before-after-gallery'); ?></option>
+                            <option><?php esc_html_e('1 week', 'medical-before-after-gallery'); ?></option>
+                            <option><?php esc_html_e('2 weeks', 'medical-before-after-gallery'); ?></option>
+                            <option><?php esc_html_e('1 month', 'medical-before-after-gallery'); ?></option>
+                            <option><?php esc_html_e('3+ months', 'medical-before-after-gallery'); ?></option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row"><label><?php esc_html_e('Treatment Duration', 'medical-before-after-gallery'); ?></label></th>
+                    <td>
+                        <select disabled>
+                            <option><?php esc_html_e('Select Treatment Duration', 'medical-before-after-gallery'); ?></option>
+                            <option><?php esc_html_e('Single session', 'medical-before-after-gallery'); ?></option>
+                            <option><?php esc_html_e('Multiple sessions', 'medical-before-after-gallery'); ?></option>
+                            <option><?php esc_html_e('Ongoing', 'medical-before-after-gallery'); ?></option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row"><label><?php esc_html_e('Results Visibility', 'medical-before-after-gallery'); ?></label></th>
+                    <td>
+                        <select disabled>
+                            <option><?php esc_html_e('Select Results Visibility', 'medical-before-after-gallery'); ?></option>
+                            <option><?php esc_html_e('Immediate', 'medical-before-after-gallery'); ?></option>
+                            <option><?php esc_html_e('1-2 weeks', 'medical-before-after-gallery'); ?></option>
+                            <option><?php esc_html_e('1 month', 'medical-before-after-gallery'); ?></option>
+                            <option><?php esc_html_e('3+ months', 'medical-before-after-gallery'); ?></option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row"><label><?php esc_html_e('Procedure Type', 'medical-before-after-gallery'); ?></label></th>
+                    <td>
+                        <select disabled>
+                            <option><?php esc_html_e('Select Procedure Type', 'medical-before-after-gallery'); ?></option>
+                            <option><?php esc_html_e('Surgical', 'medical-before-after-gallery'); ?></option>
+                            <option><?php esc_html_e('Non-surgical', 'medical-before-after-gallery'); ?></option>
+                            <option><?php esc_html_e('Minimally invasive', 'medical-before-after-gallery'); ?></option>
+                        </select>
+                    </td>
+                </tr>
+            </table>
         </div>
     </div>
     <?php
@@ -238,6 +405,139 @@ function medbeafgallery_case_admin_scripts() {
         .medbeafgallery-pair-header {
             margin: 0 0 15px 0;
             color: #333;
+        }
+
+        /* Pro Metabox Styles */
+        .medbeafgallery-pro-metabox,
+        .medbeafgallery-pro-metabox-section {
+            position: relative;
+        }
+
+        .medbeafgallery-pro-metabox-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 15px;
+        }
+
+        .medbeafgallery-pro-section-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .medbeafgallery-pro-section-header h3 {
+            margin: 0;
+        }
+
+        .medbeafgallery-pro-metabox .medbeafgallery-pro-badge,
+        .medbeafgallery-pro-metabox-section .medbeafgallery-pro-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            padding: 5px 12px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #fff;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+
+        .medbeafgallery-pro-badge .dashicons {
+            font-size: 14px;
+            width: 14px;
+            height: 14px;
+        }
+
+        .medbeafgallery-pro-metabox .medbeafgallery-pro-overlay,
+        .medbeafgallery-pro-metabox-section .medbeafgallery-pro-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(3px);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.3s ease, visibility 0.3s ease;
+            z-index: 10;
+            border-radius: 4px;
+            cursor: not-allowed;
+        }
+
+        .medbeafgallery-pro-metabox:hover .medbeafgallery-pro-overlay,
+        .medbeafgallery-pro-metabox-section:hover .medbeafgallery-pro-overlay {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .medbeafgallery-pro-overlay-content {
+            text-align: center;
+            padding: 30px;
+        }
+
+        .medbeafgallery-pro-overlay-content .dashicons {
+            font-size: 48px;
+            width: 48px;
+            height: 48px;
+            color: #667eea;
+            margin-bottom: 15px;
+        }
+
+        .medbeafgallery-pro-overlay-content p {
+            font-size: 16px;
+            font-weight: 600;
+            color: #1d2327;
+            margin-bottom: 15px;
+        }
+
+        .medbeafgallery-pro-overlay-content .button-primary {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border: none;
+            padding: 10px 20px;
+            font-size: 14px;
+            font-weight: 600;
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .medbeafgallery-pro-overlay-content .button-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(102, 126, 234, 0.6);
+        }
+
+        .medbeafgallery-pro-content {
+            pointer-events: none;
+            opacity: 0.6;
+        }
+
+        .medbeafgallery-pro-content input,
+        .medbeafgallery-pro-content select,
+        .medbeafgallery-pro-content button,
+        .medbeafgallery-pro-content textarea {
+            cursor: not-allowed !important;
+        }
+
+        .medbeafgallery-additional-pair {
+            background: #f9f9f9;
+            border: 1px solid #ddd;
+            padding: 15px;
+            border-radius: 4px;
+            margin-bottom: 15px;
+        }
+
+        .medbeafgallery-additional-pair .medbeafgallery-pair-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
     ');
 }
