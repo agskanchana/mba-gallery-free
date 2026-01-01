@@ -84,6 +84,9 @@ function medbeafgallery_admin_page() {
 
                 // Display settings form (3rd)
                 medbeafgallery_display_settings_form_main($settings);
+
+                // Display pro features (4th)
+                medbeafgallery_display_pro_features();
                 ?>
             </div>
         </div>
@@ -278,4 +281,241 @@ function medbeafgallery_dashboard_diagnostic() {
     }
 
     return $diagnostics;
+}
+
+/**
+ * Display pro features (locked in free version)
+ */
+function medbeafgallery_display_pro_features() {
+    ?>
+    <!-- Category Carousel Shortcode Generator (PRO) -->
+    <div class="medbeafgallery-admin-box medbeafgallery-pro-feature-box">
+        <div class="medbeafgallery-pro-header">
+            <h2><?php esc_html_e('Category Carousel Shortcode Generator', 'medical-before-after-gallery'); ?></h2>
+            <span class="medbeafgallery-pro-badge">
+                <span class="dashicons dashicons-lock"></span> PRO
+            </span>
+        </div>
+        <p class="medbeafgallery-pro-description"><?php esc_html_e('Generate shortcodes for category carousel display.', 'medical-before-after-gallery'); ?></p>
+        
+        <div class="medbeafgallery-pro-overlay">
+            <div class="medbeafgallery-pro-overlay-content">
+                <span class="dashicons dashicons-lock"></span>
+                <p><?php esc_html_e('This feature is available in PRO version', 'medical-before-after-gallery'); ?></p>
+                <a href="https://medicalbeforeaftergallery.com/pricing/" target="_blank" class="button button-primary">
+                    <?php esc_html_e('Upgrade to PRO', 'medical-before-after-gallery'); ?>
+                </a>
+            </div>
+        </div>
+
+        <div class="medbeafgallery-pro-content">
+            <h3><?php esc_html_e('Category Carousel', 'medical-before-after-gallery'); ?></h3>
+            <p><?php esc_html_e('Display cases from a specific category in a carousel format.', 'medical-before-after-gallery'); ?></p>
+
+            <table class="form-table medbeafgallery-pro-disabled">
+                <tr>
+                    <th scope="row"><?php esc_html_e('Category', 'medical-before-after-gallery'); ?></th>
+                    <td>
+                        <select disabled>
+                            <option><?php esc_html_e('Select a category', 'medical-before-after-gallery'); ?></option>
+                        </select>
+                        <p class="description"><?php esc_html_e('Select which category to display in the carousel.', 'medical-before-after-gallery'); ?></p>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row"><?php esc_html_e('Items Per View', 'medical-before-after-gallery'); ?></th>
+                    <td>
+                        <select disabled>
+                            <option>3</option>
+                        </select>
+                        <p class="description"><?php esc_html_e('Number of items visible at once in the carousel.', 'medical-before-after-gallery'); ?></p>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row"><?php esc_html_e('Autoplay', 'medical-before-after-gallery'); ?></th>
+                    <td>
+                        <input type="checkbox" disabled>
+                        <?php esc_html_e('Enable autoplay', 'medical-before-after-gallery'); ?>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row"><?php esc_html_e('Autoplay Speed', 'medical-before-after-gallery'); ?></th>
+                    <td>
+                        <input type="number" value="3000" disabled class="small-text">
+                        <p class="description"><?php esc_html_e('Autoplay speed in milliseconds.', 'medical-before-after-gallery'); ?></p>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row"><?php esc_html_e('Show Navigation', 'medical-before-after-gallery'); ?></th>
+                    <td>
+                        <input type="checkbox" checked disabled>
+                        <?php esc_html_e('Show navigation arrows', 'medical-before-after-gallery'); ?>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row"><?php esc_html_e('Show Dots', 'medical-before-after-gallery'); ?></th>
+                    <td>
+                        <input type="checkbox" checked disabled>
+                        <?php esc_html_e('Show pagination dots', 'medical-before-after-gallery'); ?>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row"><?php esc_html_e('Loop', 'medical-before-after-gallery'); ?></th>
+                    <td>
+                        <input type="checkbox" checked disabled>
+                        <?php esc_html_e('Enable infinite loop', 'medical-before-after-gallery'); ?>
+                    </td>
+                </tr>
+            </table>
+
+            <div class="medbeafgallery-shortcode-output">
+                <h4><?php esc_html_e('Generated Shortcode:', 'medical-before-after-gallery'); ?></h4>
+                <div class="medbeafgallery-shortcode-display">
+                    <code>[mba_category_carousel]</code>
+                    <button class="button" disabled><?php esc_html_e('Copy', 'medical-before-after-gallery'); ?></button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Watermarking (PRO) -->
+    <div class="medbeafgallery-admin-box medbeafgallery-pro-feature-box">
+        <div class="medbeafgallery-pro-header">
+            <h2><?php esc_html_e('Watermarking', 'medical-before-after-gallery'); ?></h2>
+            <span class="medbeafgallery-pro-badge">
+                <span class="dashicons dashicons-lock"></span> PRO
+            </span>
+        </div>
+
+        <div class="medbeafgallery-pro-overlay">
+            <div class="medbeafgallery-pro-overlay-content">
+                <span class="dashicons dashicons-lock"></span>
+                <p><?php esc_html_e('This feature is available in PRO version', 'medical-before-after-gallery'); ?></p>
+                <a href="https://medicalbeforeaftergallery.com/pricing/" target="_blank" class="button button-primary">
+                    <?php esc_html_e('Upgrade to PRO', 'medical-before-after-gallery'); ?>
+                </a>
+            </div>
+        </div>
+
+        <div class="medbeafgallery-pro-content">
+            <div class="notice notice-success inline">
+                <p><?php esc_html_e('GD library is available.', 'medical-before-after-gallery'); ?></p>
+            </div>
+
+            <table class="form-table medbeafgallery-pro-disabled">
+                <tr>
+                    <th scope="row"><?php esc_html_e('Enable Watermarking', 'medical-before-after-gallery'); ?></th>
+                    <td>
+                        <input type="checkbox" disabled>
+                        <?php esc_html_e('Apply watermark to all gallery images', 'medical-before-after-gallery'); ?>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row"><?php esc_html_e('Watermark Type', 'medical-before-after-gallery'); ?></th>
+                    <td>
+                        <label>
+                            <input type="radio" name="watermark_type_disabled" checked disabled> <?php esc_html_e('Text', 'medical-before-after-gallery'); ?>
+                        </label>
+                        <label style="margin-left: 15px;">
+                            <input type="radio" name="watermark_type_disabled" disabled> <?php esc_html_e('Image', 'medical-before-after-gallery'); ?>
+                        </label>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row"><?php esc_html_e('Text', 'medical-before-after-gallery'); ?></th>
+                    <td>
+                        <input type="text" class="regular-text" placeholder="<?php esc_attr_e('© Your Clinic Name', 'medical-before-after-gallery'); ?>" disabled>
+                        <p class="description"><?php esc_html_e('Text to display as watermark, for example: © Your Clinic Name', 'medical-before-after-gallery'); ?></p>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row"><?php esc_html_e('Font Size', 'medical-before-after-gallery'); ?></th>
+                    <td>
+                        <input type="number" value="24" class="small-text" disabled> px
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row"><?php esc_html_e('Color', 'medical-before-after-gallery'); ?></th>
+                    <td>
+                        <input type="text" value="#ffffff" class="medbeafgallery-color-field" disabled>
+                        <button class="button" disabled><?php esc_html_e('Select Color', 'medical-before-after-gallery'); ?></button>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row"><?php esc_html_e('Opacity', 'medical-before-after-gallery'); ?></th>
+                    <td>
+                        <input type="range" min="0" max="100" value="50" disabled>
+                        <span>50%</span>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row"><?php esc_html_e('Position', 'medical-before-after-gallery'); ?></th>
+                    <td>
+                        <select disabled>
+                            <option><?php esc_html_e('Bottom Right', 'medical-before-after-gallery'); ?></option>
+                        </select>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <!-- Additional Display Options (PRO) -->
+    <div class="medbeafgallery-admin-box medbeafgallery-pro-feature-box">
+        <div class="medbeafgallery-pro-header">
+            <h2><?php esc_html_e('Advanced Display Options', 'medical-before-after-gallery'); ?></h2>
+            <span class="medbeafgallery-pro-badge">
+                <span class="dashicons dashicons-lock"></span> PRO
+            </span>
+        </div>
+
+        <div class="medbeafgallery-pro-overlay">
+            <div class="medbeafgallery-pro-overlay-content">
+                <span class="dashicons dashicons-lock"></span>
+                <p><?php esc_html_e('This feature is available in PRO version', 'medical-before-after-gallery'); ?></p>
+                <a href="https://medicalbeforeaftergallery.com/pricing/" target="_blank" class="button button-primary">
+                    <?php esc_html_e('Upgrade to PRO', 'medical-before-after-gallery'); ?>
+                </a>
+            </div>
+        </div>
+
+        <div class="medbeafgallery-pro-content">
+            <table class="form-table medbeafgallery-pro-disabled">
+                <tr>
+                    <th scope="row"><?php esc_html_e('Category Display', 'medical-before-after-gallery'); ?></th>
+                    <td>
+                        <select disabled>
+                            <option><?php esc_html_e('Grid Layout', 'medical-before-after-gallery'); ?></option>
+                        </select>
+                        <p class="description"><?php esc_html_e('Choose how categories are displayed. Grid shows all categories at once, while Carousel displays them with navigation arrows when there are many items.', 'medical-before-after-gallery'); ?></p>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row"><?php esc_html_e('Before/After Display', 'medical-before-after-gallery'); ?></th>
+                    <td>
+                        <input type="checkbox" disabled>
+                        <?php esc_html_e('Display before and after images side by side', 'medical-before-after-gallery'); ?>
+                        <p class="description"><?php esc_html_e('When enabled, before and after images will be displayed side by side in the modal instead of using the split view slider. The split view, before view, and after view controls will be hidden.', 'medical-before-after-gallery'); ?></p>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row"><?php esc_html_e('Hide Case Details', 'medical-before-after-gallery'); ?></th>
+                    <td>
+                        <input type="checkbox" disabled>
+                        <?php esc_html_e('Hide case details from modal', 'medical-before-after-gallery'); ?>
+                        <p class="description"><?php esc_html_e('When enabled, the description and details tabs will be hidden from the modal view.', 'medical-before-after-gallery'); ?></p>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row"><?php esc_html_e('Hide Sidebar', 'medical-before-after-gallery'); ?></th>
+                    <td>
+                        <input type="checkbox" disabled>
+                        <?php esc_html_e('Hide sidebar with filters', 'medical-before-after-gallery'); ?>
+                        <p class="description"><?php esc_html_e('When enabled, the sidebar with gender, age, and other filters will be hidden from the gallery view.', 'medical-before-after-gallery'); ?></p>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <?php
 }

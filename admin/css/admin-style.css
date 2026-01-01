@@ -753,3 +753,163 @@
         font-size: 2em;
     }
 }
+
+/* Pro Feature Boxes (Locked Features in Free Version) */
+.medbeafgallery-pro-feature-box {
+    position: relative;
+    margin-bottom: 30px;
+    opacity: 1;
+}
+
+.medbeafgallery-pro-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.medbeafgallery-pro-header h2 {
+    margin: 0;
+    font-size: 18px;
+}
+
+.medbeafgallery-pro-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    padding: 5px 12px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: #fff;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.medbeafgallery-pro-badge .dashicons {
+    font-size: 14px;
+    width: 14px;
+    height: 14px;
+}
+
+.medbeafgallery-pro-description {
+    color: #646970;
+    margin-bottom: 20px;
+}
+
+/* Pro Overlay */
+.medbeafgallery-pro-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(3px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    z-index: 10;
+    border-radius: 5px;
+    cursor: not-allowed;
+}
+
+.medbeafgallery-pro-feature-box:hover .medbeafgallery-pro-overlay {
+    opacity: 1;
+    visibility: visible;
+}
+
+.medbeafgallery-pro-overlay-content {
+    text-align: center;
+    padding: 30px;
+}
+
+.medbeafgallery-pro-overlay-content .dashicons {
+    font-size: 48px;
+    width: 48px;
+    height: 48px;
+    color: #667eea;
+    margin-bottom: 15px;
+}
+
+.medbeafgallery-pro-overlay-content p {
+    font-size: 16px;
+    font-weight: 600;
+    color: #1d2327;
+    margin-bottom: 15px;
+}
+
+.medbeafgallery-pro-overlay-content .button-primary {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border: none;
+    padding: 10px 20px;
+    font-size: 14px;
+    font-weight: 600;
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.medbeafgallery-pro-overlay-content .button-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(102, 126, 234, 0.6);
+}
+
+/* Pro Content Styling */
+.medbeafgallery-pro-content {
+    position: relative;
+    pointer-events: none;
+}
+
+.medbeafgallery-pro-disabled {
+    opacity: 0.6;
+}
+
+.medbeafgallery-pro-disabled input,
+.medbeafgallery-pro-disabled select,
+.medbeafgallery-pro-disabled button,
+.medbeafgallery-pro-disabled textarea {
+    cursor: not-allowed !important;
+}
+
+/* Shortcode Output in Pro Features */
+.medbeafgallery-shortcode-output {
+    margin-top: 20px;
+    padding: 15px;
+    background: #f6f7f7;
+    border-radius: 4px;
+}
+
+.medbeafgallery-shortcode-output h4 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+.medbeafgallery-shortcode-display {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    background: #fff;
+    border: 1px solid #dcdcde;
+    border-radius: 3px;
+}
+
+.medbeafgallery-shortcode-display code {
+    flex: 1;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 14px;
+    color: #2271b1;
+}
+
+/* Notice styling within pro boxes */
+.medbeafgallery-pro-feature-box .notice {
+    pointer-events: none;
+}
+
+.medbeafgallery-pro-feature-box .notice.inline {
+    margin: 0 0 15px 0;
+}
