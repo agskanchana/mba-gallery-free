@@ -1,0 +1,755 @@
+/**
+ * Admin styles for MEDBEAFGALLERY Gallery plugin
+ */
+
+/* General Admin Styling */
+.medbeafgallery-admin-wrap {
+    max-width: 1200px;
+    margin: 20px 0;
+}
+
+.medbeafgallery-admin-wrap h1 {
+    margin-bottom: 20px;
+    color: #23282d;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+/* Admin Header */
+.medbeafgallery-admin-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ccd0d4;
+    border-radius: 5px;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.04);
+}
+
+.medbeafgallery-admin-header-info h2 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+.medbeafgallery-admin-header-info p {
+    margin: 0;
+    color: #646970;
+}
+
+.medbeafgallery-admin-header-actions {
+    display: flex;
+    gap: 10px;
+}
+
+/* Admin Stats Boxes */
+.medbeafgallery-admin-stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.medbeafgallery-stat-box {
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ccd0d4;
+    border-left: 4px solid #2271b1;
+    border-radius: 5px;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.04);
+    text-align: center;
+}
+
+.medbeafgallery-stat-box h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #3c434a;
+}
+
+.medbeafgallery-stat-number {
+    display: block;
+    margin-bottom: 15px;
+    font-size: 36px;
+    font-weight: 600;
+    color: #1d2327;
+}
+
+.medbeafgallery-stat-link {
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+}
+
+/* Admin Help Section */
+.medbeafgallery-admin-help {
+    margin-bottom: 30px;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ccd0d4;
+    border-radius: 5px;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.04);
+}
+
+.medbeafgallery-admin-help h2 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #f0f0f1;
+    font-size: 18px;
+    color: #1d2327;
+}
+
+.medbeafgallery-help-columns {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.medbeafgallery-help-column {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 4px;
+}
+
+.medbeafgallery-help-column h3 {
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-size: 16px;
+    color: #1d2327;
+}
+
+.medbeafgallery-help-column p {
+    margin-bottom: 20px;
+    color: #646970;
+}
+
+/* Shortcode Display Section */
+.medbeafgallery-shortcode-display {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
+
+.medbeafgallery-shortcode-display code {
+    flex-grow: 1;
+    padding: 8px 12px;
+    background-color: #f0f0f1;
+    border: 1px solid #dcdcde;
+    border-radius: 4px 0 0 4px;
+    font-family: Consolas, Monaco, monospace;
+    font-size: 13px;
+    color: #3c434a;
+}
+
+.medbeafgallery-copy-shortcode {
+    padding: 8px 12px;
+    background-color: #f0f0f1;
+    border: 1px solid #dcdcde;
+    border-left: none;
+    border-radius: 0 4px 4px 0;
+    cursor: pointer;
+    font-size: 13px;
+}
+
+.medbeafgallery-copy-shortcode:hover {
+    background-color: #e5e5e5;
+}
+
+/* Shortcode Options Table */
+.medbeafgallery-admin-shortcodes {
+    margin-bottom: 30px;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ccd0d4;
+    border-radius: 5px;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.04);
+}
+
+.medbeafgallery-admin-shortcodes h2 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #f0f0f1;
+    font-size: 18px;
+    color: #1d2327;
+}
+
+.medbeafgallery-shortcode-table {
+    border-collapse: collapse;
+    margin-top: 10px;
+    width: 100%;
+}
+
+.medbeafgallery-shortcode-table th,
+.medbeafgallery-shortcode-table td {
+    padding: 12px;
+    text-align: left;
+}
+
+.medbeafgallery-shortcode-table code {
+    padding: 4px 6px;
+    background-color: #f0f0f1;
+    border-radius: 3px;
+    font-size: 12px;
+}
+
+/* Metabox Styling */
+.medbeafgallery-admin-metabox {
+    margin: 15px 0;
+}
+
+.medbeafgallery-admin-metabox p.description {
+    margin-bottom: 20px;
+    color: #646970;
+    font-style: italic;
+}
+
+/* Image Pair Styling */
+.medbeafgallery-image-pair {
+    margin-bottom: 25px;
+    padding: 15px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.medbeafgallery-pair-header {
+    margin-top: 0;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #ddd;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.medbeafgallery-pair-header .dashicons {
+    cursor: pointer;
+    color: #646970;
+    transition: color 0.15s ease;
+}
+
+.medbeafgallery-pair-header .dashicons-trash:hover {
+    color: #b32d2e;
+}
+
+.medbeafgallery-pair-header .dashicons-move {
+    cursor: move;
+}
+
+.medbeafgallery-image-pair-row {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 15px;
+}
+
+.medbeafgallery-image-pair-column {
+    flex: 1;
+}
+
+.medbeafgallery-image-container {
+    text-align: center;
+}
+
+.medbeafgallery-image-container label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.medbeafgallery-image-preview {
+    position: relative;
+    width: 100%;
+    min-height: 150px;
+    margin-bottom: 10px;
+    background-color: #f0f0f1;
+    border: 1px dashed #b4b9be;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.medbeafgallery-image-preview img {
+    max-width: 100%;
+    display: block;
+}
+
+.medbeafgallery-image-description {
+    margin-top: 15px;
+}
+
+.medbeafgallery-image-description label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 600;
+}
+
+/* Add Button Container */
+.medbeafgallery-add-pair-container {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+#medbeafgallery-add-image-pair {
+    padding: 8px 15px;
+}
+
+#medbeafgallery-add-image-pair .dashicons {
+    margin-right: 5px;
+    vertical-align: text-bottom;
+}
+
+/* Case Details Form */
+.medbeafgallery-case-details .form-table th {
+    width: 150px;
+    padding: 15px 10px 15px 0;
+}
+
+/* Settings page */
+.medbeafgallery-settings-form {
+    margin-top: 20px;
+}
+
+.medbeafgallery-settings-form .form-table {
+    margin-top: 20px;
+}
+
+.medbeafgallery-settings-form .form-table th {
+    width: 250px;
+    padding: 15px 10px 15px 0;
+}
+
+.medbeafgallery-color-preview {
+    width: 28px;
+    height: 28px;
+    border-radius: 3px;
+    border: 1px solid #ddd;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
+/* Media uploader buttons */
+.medbeafgallery-upload-before-btn,
+.medbeafgallery-upload-after-btn {
+    margin-right: 5px !important;
+}
+
+/* Responsive styles for admin */
+@media screen and (max-width: 782px) {
+    .medbeafgallery-admin-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .medbeafgallery-admin-header-actions {
+        margin-top: 15px;
+        width: 100%;
+    }
+
+    .medbeafgallery-admin-header-actions .button {
+        flex: 1;
+    }
+
+    .medbeafgallery-image-pair-row {
+        flex-direction: column;
+    }
+
+    .medbeafgallery-case-details .form-table th {
+        width: 100%;
+        padding-bottom: 0;
+    }
+
+    .medbeafgallery-case-details .form-table td {
+        padding-top: 5px;
+    }
+}
+
+
+/* Adjusted styling for the shortcode box */
+        .medbeafgallery-shortcode-box {
+            background: #fff;
+            border: 1px solid #ccd0d4;
+            box-shadow: 0 1px 1px rgba(0, 0, 0, 0.04);
+            padding: 15px 20px;
+            margin-bottom: 20px;
+            border-radius: 3px;
+        }
+        .medbeafgallery-shortcode-display {
+            display: flex;
+            align-items: center;
+            margin-top: 10px;
+        }
+        .medbeafgallery-shortcode-display code {
+            padding: 8px 15px;
+            background: #f1f1f1;
+            border-radius: 3px;
+            font-size: 14px;
+            flex-grow: 1;
+            margin-right: 10px;
+        }
+        .medbeafgallery-admin-main {
+            width: 100%;
+        }
+
+        /* Color picker enhancements */
+        .wp-picker-container {
+            display: inline-block;
+        }
+
+        .wp-picker-container .wp-color-result {
+            margin-bottom: 0;
+        }
+
+        /* Range slider styling */
+        .medbeafgallery-range-slider {
+            width: 200px;
+            vertical-align: middle;
+        }
+
+        .medbeafgallery-range-value {
+            display: inline-block;
+            margin-left: 10px;
+            min-width: 35px;
+        }
+
+        /* Color Presets Styling */
+        .medbeafgallery-color-presets {
+            margin-top: 15px;
+            padding: 15px;
+            background: #f9f9f9;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+
+        .medbeafgallery-color-presets p {
+            margin: 0 0 10px 0;
+            font-weight: 600;
+            color: #333;
+        }
+
+        .medbeafgallery-preset-colors,
+        .medbeafgallery-preset-gradients {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+            margin-bottom: 15px;
+        }
+
+        .medbeafgallery-preset-gradients:last-child {
+            margin-bottom: 0;
+        }
+
+        .medbeafgallery-preset-color {
+            width: 40px;
+            height: 40px;
+            border: 2px solid #ddd;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            position: relative;
+        }
+
+        .medbeafgallery-preset-color:hover {
+            border-color: #0073aa;
+            transform: scale(1.1);
+            box-shadow: 0 2px 8px rgba(0, 115, 170, 0.3);
+        }
+
+        .medbeafgallery-preset-color.active {
+            border-color: #0073aa;
+            border-width: 3px;
+            box-shadow: 0 0 0 2px rgba(0, 115, 170, 0.2);
+        }
+
+        .medbeafgallery-preset-color::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 16px;
+            height: 16px;
+            background: white;
+            border-radius: 50%;
+            opacity: 0;
+            transition: opacity 0.2s ease;
+        }
+
+        .medbeafgallery-preset-color.active::after {
+            opacity: 1;
+        }
+
+        /* Enhanced color picker input */
+        .medbeafgallery-color-picker {
+            width: 300px !important;
+            font-family: monospace;
+            font-size: 14px;
+        }
+
+   .medbeafgallery-admin-columns {
+            display: flex;
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .medbeafgallery-admin-main {
+            flex: 1;
+        }
+
+        .medbeafgallery-admin-sidebar {
+            width: 300px;
+        }
+
+        .medbeafgallery-admin-box {
+            background: #fff;
+            border: 1px solid #ccd0d4;
+            box-shadow: 0 1px 1px rgba(0,0,0,.04);
+            padding: 15px;
+            margin-bottom: 20px;
+        }
+
+        .medbeafgallery-settings-form h2 {
+            padding: 0;
+            margin-top: 0;
+        }
+
+        .medbeafgallery-shortcode-display {
+            display: flex;
+            align-items: center;
+            margin: 15px 0;
+            background: #f0f0f1;
+            padding: 10px;
+            border-radius: 4px;
+        }
+
+        .medbeafgallery-shortcode-display code {
+            flex-grow: 1;
+            padding: 5px 10px;
+            background: none;
+        }
+
+        @media (max-width: 782px) {
+            .medbeafgallery-admin-columns {
+                flex-direction: column;
+            }
+
+            .medbeafgallery-admin-sidebar {
+                width: 100%;
+            }
+        }
+
+/* Pro Features Page Styles */
+.medbeafgallery-pro-features {
+    background: #f1f1f1;
+    margin: 0 0 0 -20px;
+    padding: 0;
+}
+
+.medbeafgallery-pro-features h1 {
+    background: #fff;
+    margin: 0 0 30px 0;
+    padding: 20px 30px;
+    border-bottom: 1px solid #ddd;
+}
+
+.medbeafgallery-pro-hero {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 60px 30px;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.medbeafgallery-pro-hero h2 {
+    font-size: 2.5em;
+    margin-bottom: 15px;
+    color: white;
+}
+
+.medbeafgallery-pro-hero p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+    opacity: 0.9;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.demo-btn, .get-pro-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 25px !important;
+    font-size: 16px !important;
+    text-decoration: none !important;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.demo-btn {
+    background: rgba(255,255,255,0.2) !important;
+    border: 2px solid rgba(255,255,255,0.5) !important;
+    color: white !important;
+}
+
+.demo-btn:hover {
+    background: rgba(255,255,255,0.3) !important;
+}
+
+.get-pro-btn {
+    background: #ff6b6b !important;
+    border: 2px solid #ff6b6b !important;
+    color: white !important;
+}
+
+.get-pro-btn:hover {
+    background: #ff5252 !important;
+    border-color: #ff5252 !important;
+}
+
+.medbeafgallery-features-comparison {
+    background: white;
+    padding: 40px 30px;
+    margin-bottom: 40px;
+}
+
+.medbeafgallery-features-comparison h3 {
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    text-align: center;
+    color: #666;
+    margin-bottom: 30px;
+    font-size: 1.1em;
+}
+
+.feature-included {
+    color: #46b450;
+    font-size: 18px;
+}
+
+.feature-not-included {
+    color: #dc3232;
+    font-size: 18px;
+}
+
+.pro-feature {
+    background: #f9f9f9;
+}
+
+.pro-version {
+    background: #e8f5e8;
+}
+
+.medbeafgallery-pro-highlights {
+    background: white;
+    padding: 40px 30px;
+    margin-bottom: 40px;
+}
+
+.medbeafgallery-pro-highlights h3 {
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 40px;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.feature-card {
+    text-align: center;
+    padding: 30px 20px;
+    border: 1px solid #e1e1e1;
+    border-radius: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.feature-icon {
+    margin-bottom: 20px;
+}
+
+.feature-icon .dashicons {
+    font-size: 48px;
+    color: #667eea;
+    height: auto;
+}
+
+.feature-card h4 {
+    margin-bottom: 15px;
+    color: #333;
+
+}
+
+.feature-card p {
+    color: #666;
+    line-height: 1.6;
+}
+
+.medbeafgallery-cta-section {
+    background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
+    color: white;
+    padding: 60px 30px;
+    text-align: center;
+}
+
+.medbeafgallery-cta-section h3 {
+    font-size: 2.2em;
+    margin-bottom: 15px;
+    color: white;
+}
+
+.medbeafgallery-cta-section p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+    opacity: 0.9;
+}
+
+.cta-buttons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.button-hero {
+    padding: 15px 30px !important;
+    font-size: 18px !important;
+}
+
+@media (max-width: 768px) {
+    .hero-buttons, .cta-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .features-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .medbeafgallery-pro-hero h2 {
+        font-size: 2em;
+    }
+}
