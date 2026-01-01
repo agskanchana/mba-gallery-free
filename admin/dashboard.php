@@ -68,6 +68,10 @@ function medbeafgallery_admin_page() {
                 <a href="<?php echo esc_url(admin_url('edit-tags.php?taxonomy=medbeafgallery_category&post_type=medbeafgallery_case')); ?>" class="button">
                     <?php esc_html_e('Manage Categories', 'medical-before-after-gallery'); ?>
                 </a>
+                <a href="https://buymeacoffee.com/wpplugindev" target="_blank" class="button medbeafgallery-coffee-button">
+                    <span class="dashicons dashicons-heart"></span>
+                    <?php esc_html_e('Love this plugin? Support us!', 'medical-before-after-gallery'); ?>
+                </a>
             </div>
         </div>
 
@@ -302,7 +306,7 @@ function medbeafgallery_display_pro_features() {
             <div class="medbeafgallery-pro-overlay-content">
                 <span class="dashicons dashicons-lock"></span>
                 <p><?php esc_html_e('This feature is available in PRO version', 'medical-before-after-gallery'); ?></p>
-                <a href="https://medicalbeforeaftergallery.com/pricing/" target="_blank" class="button button-primary">
+                <a href="https://medicalbeforeaftergallery.com/#pricing" target="_blank" class="button button-primary">
                     <?php esc_html_e('Upgrade to PRO', 'medical-before-after-gallery'); ?>
                 </a>
             </div>
@@ -391,7 +395,7 @@ function medbeafgallery_display_pro_features() {
             <div class="medbeafgallery-pro-overlay-content">
                 <span class="dashicons dashicons-lock"></span>
                 <p><?php esc_html_e('This feature is available in PRO version', 'medical-before-after-gallery'); ?></p>
-                <a href="https://medicalbeforeaftergallery.com/pricing/" target="_blank" class="button button-primary">
+                <a href="https://medicalbeforeaftergallery.com/#pricing" target="_blank" class="button button-primary">
                     <?php esc_html_e('Upgrade to PRO', 'medical-before-after-gallery'); ?>
                 </a>
             </div>
@@ -473,7 +477,7 @@ function medbeafgallery_display_pro_features() {
             <div class="medbeafgallery-pro-overlay-content">
                 <span class="dashicons dashicons-lock"></span>
                 <p><?php esc_html_e('This feature is available in PRO version', 'medical-before-after-gallery'); ?></p>
-                <a href="https://medicalbeforeaftergallery.com/pricing/" target="_blank" class="button button-primary">
+                <a href="https://medicalbeforeaftergallery.com/#pricing" target="_blank" class="button button-primary">
                     <?php esc_html_e('Upgrade to PRO', 'medical-before-after-gallery'); ?>
                 </a>
             </div>
